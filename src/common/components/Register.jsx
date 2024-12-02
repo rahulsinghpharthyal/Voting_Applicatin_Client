@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import defaultAxios from '../../customAxios/privateAxios';
+import defaultAxios, { BASE_URL } from '../../customAxios/privateAxios';
 import { toast } from "react-toastify";
 
 const Register = ({setActiveSection}) => {
@@ -22,7 +22,7 @@ const Register = ({setActiveSection}) => {
         toast.warn("All fields are required");
         return;
       }
-      const {data, status} = await defaultAxios.post('/api/v1/create-user', formData);
+      const {data, status} = await defaultAxios.post(`${BASE_URL}/api/v1/create-user`, formData);
         if(data?.success){
           toast.success(data?.message);
           setFormData({ 
