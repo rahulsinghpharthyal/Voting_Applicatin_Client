@@ -1,7 +1,7 @@
 import React from 'react';
 
 const VoterCart = ({ name, logo, votes, maxVotes }) => {
-    const votePercentage = votes > 0 ? (votes / maxVotes) * 100 : 0;
+    const votePercentage = votes > 0 ? (votes / 1000) * 100 : 0;
     return (
         <div className="border p-2 rounded flex items-center space-x-2">
             <img src={logo} alt={`${name} logo`} className="w-8 h-8 rounded-full" />

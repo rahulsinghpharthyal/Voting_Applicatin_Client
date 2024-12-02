@@ -7,12 +7,12 @@ const ViewCandidateResult = () => {
   const dispatch = useDispatch();
   const { candidates } = useSelector((state) => state.candidate);
   
-  const maxVotes = Math.max(candidates?.map((c) => c.votes));
+  const maxVotes = Number.MAX_SAFE_INTEGER;
   
   useEffect(() => {
     dispatch(getAllCandidate());
   }, [dispatch]);
-  
+
   return (
     <div className="container mx-auto p-4">
       <header className="mb-4">
