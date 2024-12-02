@@ -3,7 +3,7 @@ import InfoCard from "../components/InfoCard";
 import { MdOutlineDoNotDisturbOnTotalSilence } from "react-icons/md";
 import { GiTotem } from "react-icons/gi";
 import { SiVirustotal } from "react-icons/si";
-import VoterTurnoutChart from "../components/VoterTurnOutChart";
+import VoterTurnoutChart from "../components/VoterTurnoutChart";
 import CandidateVotesChart from "../components/CandidateVotesChart";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllCandidate } from "../../redux/actions/candidateAction";
